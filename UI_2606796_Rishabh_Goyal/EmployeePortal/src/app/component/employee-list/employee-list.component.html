@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <h2 class="mb-5 ml-5">
+    <fa name="users"></fa>Employee List
+  </h2>
+
+  <div class="alert alert-warning" *ngIf="!employees || employees.length==0">
+    <fa name="exclamation-triangle"></fa> Records could not be found or loaded
+  </div>
+
+  <div class="row" *ngIf="employees && employees.length>0">
+    <div class="col-lg-2 ml-1 mb-1" *ngFor="let e of employees">
+      <div class="card" (mouseover)="cf.hidden=false" (mouseleave)="cf.hidden=true">
+        <img class="card-img-top" [src]="e.gender=='Gent'?gentLogo:ladyLogo" />
+        <div class="card-body">
+          <h6 class="card-title">{{e|fullName|adjustLength:12}}</h6>
+          <p class="card-text">
+            {{e.emailId|adjustLength:13}}
+            <br /> {{e.mobileNumber}}
+          </p>
+        </div>
+        <div class="card-footer" hidden="true" #cf>
+          <div class="btn-group">
+            <a routerLink="/editEmployee/{{e.empId}}" class="btn">
+              <fa name="edit"></fa>
+            </a>
+            <a routerLink="/delEmployee/{{e.empId}}" class="btn">
+              <fa name="trash"></fa>
+            </a>
+            <a routerLink="/viewEmployee/{{e.empId}}" class="btn ">
+              <fa name="address-card"></fa>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

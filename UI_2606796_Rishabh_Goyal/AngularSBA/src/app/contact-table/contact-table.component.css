@@ -1,0 +1,51 @@
+/*Styling of the table9*/
+table{   
+    border-top: double;
+    border-bottom: double;
+    border-right: blank;
+       padding: 5px;
+       margin: 5px;   
+        width: 100%;
+    }
+td,tr,th{
+        border: .75px solid black; 
+        height:wrap;
+    }
+td{
+    text-align: center;
+    width:15%;
+}
+    tr:nth-child(even){    background-color:bisque}
+    tr:nth-child(odd){ background-color: khaki}
+    th{background-color: tan;
+        color:green
+        
+    }
+
+#title{
+    width: 15px;
+}
+tfoot tr,tfoot th
+{
+ border-bottom: 0px;
+}
+
+.lady{
+    background-color: red;
+
+}
+.gent{
+    background-color: blue;
+    color:white;
+}
+span{
+    background-color: crimson;
+    color: white;
+    font-weight: bolder;
+    border-radius: 90px;
+    display: inline-block;
+    margin: 8px;
+    padding:9px;
+    border: 1px solid black;
+  }
+  

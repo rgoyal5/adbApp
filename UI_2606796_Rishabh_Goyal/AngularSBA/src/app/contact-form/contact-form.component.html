@@ -1,0 +1,45 @@
+<h3>Contact Details</h3>
+<form>
+  <div>
+    <label>Title:</label>
+    <select name="cti"  [(ngModel)]="contact.title" ng-Required="true">
+          <option>Mr.</option>
+          <option>Mrs.</option>
+          <option>Miss.</option>
+          <option>Dr.</option>  
+          <option>Prof.</option>
+    </select>
+  </div>
+  <div>
+    <label>First Name:</label>
+    <input type="text" name="cna" [(ngModel)]="contact.firstName" ng-required="true"/>
+  </div>
+
+  <div>
+      <label>Last Name:</label>
+      <input type="text" name="cna2" [(ngModel)]="contact.lastName" required/>
+  </div>
+  <div>
+      <label>Mobile No.:</label>
+      <input type="text" name="cno1" [(ngModel)]="contact.mobile1" required pattern="[0-9]{10}"/>
+  </div>
+  <div>
+      <label>Alternate Mobile No.:</label>
+      <input type="text" name="cno2" [(ngModel)]="contact.mobile2" placeholder="Optional" pattern="[0-9]{10}"/>
+  </div>
+  <div>
+      <label>email:</label>
+      <input type="email" name="cem" [(ngModel)]="contact.email" required/>
+  </div>
+  <div>
+      <label>Gender:</label>
+      <select name="cge" required [(ngModel)]="contact.gender">
+          <option>Gent</option>
+            <option>Lady</option>
+      </select>
+    </div>
+  <div>
+    <button type="button" (click)="cancel()">Cancel</button>
+    <button type="button" (click)="save()" >Save</button>
+  </div>
+</form>

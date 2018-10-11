@@ -1,0 +1,58 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-sm-9 m-auto" *ngIf="!employee">
+      <h3>
+        <fa name="cog" animation="spin"></fa> Loading
+      </h3>
+    </div>
+    <div class="col-sm-9 m-auto" *ngIf="employee">
+      <h3 class="mb-5 mt-5">
+        <fa name="address-card"></fa>
+        Employee Details
+      </h3>
+      <div class="card">
+        <div class="card-header">
+          <h5 class="float-left">{{employee.firstName}} {{employee.lastName}}</h5>
+          <div class="btn-group float-right">
+              <a routerLink="/editEmployee/{{employee.empId}}" class="btn">
+                <fa name="edit"></fa>
+              </a>
+              <a routerLink="/delEmployee/{{employee.empId}}" class="btn">
+                <fa name="trash"></fa>
+              </a>
+  
+            </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <img [src]="employee.gender=='Gent'?gentLogo:ladyLogo" class="img-fluid" />
+            </div>
+            <div class="col-md-9">
+              <p> Basic : &#8377;{{employee.basic | number}}
+              </p>
+              <p>
+                HRA : {{(employee.hra)/100 | percent}}
+              </p>
+              <p>
+                Department : {{employee.dept}}
+              </p>
+              
+              <p>
+                <fa name="envelope"></fa> {{employee.emailId}}
+              </p>
+              <p>
+                <fa name="mobile"></fa> {{employee.mobileNumber}}
+              </p>
+              <p>
+                <fa name="calendar"></fa> {{employee.dateOfBirth}}
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<h3>Contacts List</h3>
+<div>
+    <span className="badge">Gents:{{gents.length}}</span>
+    <span className="badge">Ladies:{{ladies.length}}</span>
+</div>
+<table style="width: 100%">
+  <thead>
+  <tr>
+    <th id="title">Title</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Mobile No.</th>
+    <th>Email</th>
+    <th>Gender</th>
+  </tr>
+  </thead>
+  <tfoot>
+    <th colspan="6">
+      {{contacts.length}} Contact(s) found
+    </th>
+  </tfoot>
+  <tbody>
+    <tr *ngFor="let contact of contacts"  >
+      <td>{{contact.title | titlecase}}</td>
+      <td>{{contact.firstName | titlecase}}</td>
+      <td>{{contact.lastName | titlecase}}</td>
+      <td>{{contact.mobile1 }}</td>
+      <td>{{contact.email}}</td>
+      <td class="lady" *ngIf="contact.gender=='Lady'">{{contact.gender}}</td>
+
+      <td class="gent" *ngIf="contact.gender=='Gent'">{{contact.gender}}</td>
+    
+    </tr>
+    
+  </tbody>
+</table>
