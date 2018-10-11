@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: emplyoee-app-jdbc
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: verizon
+Implementation-Vendor-Id: com.verizon
+Build-Jdk: 1.8.0_172
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/emplyoee-app-jdbc
+Created-By: Maven Integration for Eclipse
+
