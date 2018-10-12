@@ -1,0 +1,34 @@
+<h3>Book Details</h3>
+
+<table>
+  <tr>
+    <th>Employee#</th>
+    <td>{{employee.eid}}</td>
+  </tr>
+
+  <tr>
+    <th>Name</th>
+    <td>{{employee.name}}</td>
+  </tr>
+
+  <tr>
+    <th>Basic</th>
+    <td>{{employee.basic}}</td>
+  </tr>
+
+  <tr>
+    <th>HRA</th>
+    <td>{{employee.hra}}</td>
+  </tr>
+
+  <tr>
+    <th>Department</th>
+    <td>{{employee.dept}}</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:right">
+      <button (click)="doEdit()">Edit</button>
+      <button (click)="doDelete()">Delete</button>
+    </td>
+  </tr>
+</table>

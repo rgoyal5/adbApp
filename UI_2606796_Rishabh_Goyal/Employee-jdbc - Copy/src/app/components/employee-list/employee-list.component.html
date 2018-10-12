@@ -1,0 +1,21 @@
+<h2>Book List</h2>
+
+<table>
+  <thead><tr>
+    <th>Employee#</th>
+    <th>Name</th>
+    <th>Basic</th>
+    <th>HRA</th>
+    <th>Department</th>
+    </tr>
+  </thead>
+  <tbodY>
+    <tr *ngFor="let e of employees" (click)="showBook(b.bcode)">
+      <td>{{b.bcode}}</td>
+      <td>{{b.title}}</td>
+      <td>{{b.price}}</td>
+      <td>{{b.category}}</td>
+      <td>{{b.type}}</td>
+    </tr>
+  </tbodY>
+</table>
