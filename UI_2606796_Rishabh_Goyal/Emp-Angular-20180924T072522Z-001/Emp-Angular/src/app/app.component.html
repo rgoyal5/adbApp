@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" routerLink="/">
+    <img [src]="logoUrl" style="width:40px" /> {{title}} </a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/listEmplyoees">List Employees</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/addEmplyoee">New Employee</a>
+    </li>
+  </ul>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="text" name="emailId" class="form-control" />
+      <div class="input-group-prepend">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">@</button>
+          <button type="button" class="btn btn-primary">&#128241;</button>
+          <button type="button" class="btn btn-primary">&#128197;</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</nav>
+
+<router-outlet></router-outlet>

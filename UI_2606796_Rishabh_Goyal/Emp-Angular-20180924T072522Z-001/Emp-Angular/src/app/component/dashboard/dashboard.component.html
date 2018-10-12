@@ -1,0 +1,33 @@
+<div class="jumbotron">
+    <header class="container-fluid">
+      <h1>
+        <img [src]="logoUrl" class="img-fluid" style="width: 10%;margin-right: 5%"/>
+        {{title}}
+      </h1>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="card-columns">
+      <div class="card" *ngFor="let g of ['Gent','Lady']">
+        <div class="card-body text-center">
+          <h4 class="card-title">
+             {{g}}:
+            <span class="badge badge-info">{{emplyoees|genderCount:g}}/{{emplyoees.length}}</span>
+          </h4>
+        </div>
+      </div>
+    </div>
+    </div>s
+    <div class="container">
+      <div class="card-columns">
+        <div class="card" *ngFor="let g2 of ['Database','Cloud','Customer','Java']">
+          <div class="card-body text-center">
+            <h4 class="card-title">
+               {{g2}}:
+              <span class="badge badge-info">{{emplyoees|deptCount:g2}}/{{emplyoees.length}}</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+      </div>

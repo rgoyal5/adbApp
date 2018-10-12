@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="card-deck">
+
+    <div class="card" *ngFor="let c of emplyoees">
+      <img class="card-img-top" [src]="c.gender=='Gent'?gentLogo:ladyLogo" style="width:25%" />
+      <img class="card-img-top" [src]="cloudIcon" *ngIf="c.dept=='Cloud'" style="width:25%" />
+      <img class="card-img-top" [src]="dbIcon" *ngIf="c.dept=='Database'" style="width:25%" />
+      <img class="card-img-top" [src]="custIcon" *ngIf="c.dept=='Customer'" style="width:25%" />
+      <img class="card-img-top" [src]="javaIcon" *ngIf="c.dept=='Java'" style="width:25%" />
+      <div class="card-body">
+        <h4 class="card-title">{{c.firstName}} {{c.lastName}}</h4>
+        <p class="card-text">
+          {{c.emailId}}
+          <br/> {{c.mobileNumber}}
+          <br/> <strong>Basic:</strong>{{c.basic}}
+          <br/> <strong>Hra:</strong>{{c.hra}}
+          <br/> <strong>Dept:</strong>{{c.dept}}
+          <br/>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

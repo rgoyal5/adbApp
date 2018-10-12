@@ -1,0 +1,28 @@
+<h3>Employee List</h3>
+
+<table style="width: 100%">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Basic</th>
+    <th>HRA</th>
+    <th>Department</th>
+  </tr>
+  </thead>
+  <tfoot>
+    <th colspan="4">
+      {{employees.length}} Employee(s) found
+    </th>
+    <th></th>
+  </tfoot>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{employee.id | }}</td>
+      <td>{{employee.name | uppercase}}</td>
+      <td>{{employee.basic | currency: 'INR'}}</td>
+      <td>{{employee.hra | percent}}</td>
+      <td>{{employee.department | titlecase}}</td>
+    </tr>
+  </tbody>
+</table>
